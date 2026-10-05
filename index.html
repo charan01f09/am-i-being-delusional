@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0914" />
+    <meta property="og:title" content="AM I BEING DELUSIONAL? 🧠" />
+    <meta property="og:description" content="Paste the evidence. Get roasted by a very unqualified council." />
+    <link rel="icon" href="brand-mark.svg" type="image/svg+xml" />
+    <meta
+      name="description"
+      content="A hilarious entertainment-only reality check for your most overthought situations."
+    />
+    <title>AM I BEING DELUSIONAL? 🧠</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-noise" aria-hidden="true"></div>
+    <div class="orb orb-violet" aria-hidden="true"></div>
+    <div class="orb orb-coral" aria-hidden="true"></div>
+
+    <header class="site-header shell">
+      <a class="brand" href="#top" aria-label="Am I Being Delusional home">
+        <button id="brand-mark" class="brand-mark" type="button" aria-label="Poke the brain">🧠</button>
+        <span class="brand-wordmark">AM I BEING<br /><strong>DELUSIONAL?</strong></span>
+      </a>
+      <div class="header-status" aria-label="Project status">
+        <span class="status-dot"></span>
+        <span>NO PHD REQUIRED</span>
+      </div>
+    </header>
+
+    <main id="top" class="shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> THE INTERNET'S LEAST QUALIFIED THERAPIST</p>
+          <h1 id="page-title">Am I being <em>delusional?</em></h1>
+          <p class="hero-subtitle">
+            Hand over the evidence. We’ll separate <strong>intuition</strong> from a
+            full-blown cinematic universe.
+          </p>
+        </div>
+        <div class="hero-note" aria-label="App note">
+          <span class="note-pin">✦</span>
+          <p>For entertainment only.<br /><strong>Zero diagnoses. Maximum honesty.</strong></p>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Delusion analysis workspace">
+        <div class="panel confession-panel">
+          <div class="panel-topline">
+            <span class="panel-kicker">01 / THE CONFESSION</span>
+            <span class="panel-stamp">CLASSIFIED-ish</span>
+          </div>
+          <h2>What happened?</h2>
+          <p class="panel-description">Give us the situation exactly as it lives rent-free in your head.</p>
+
+          <div class="category-block">
+            <div class="field-label-row">
+              <label class="field-label" for="situation">Your situation</label>
+              <span id="character-count" class="character-count">0 / 500</span>
+            </div>
+            <textarea
+              id="situation"
+              maxlength="500"
+              rows="7"
+              placeholder="They viewed my story in 2 minutes but didn't reply to my message..."
+              aria-describedby="input-helper"
+            ></textarea>
+            <p id="input-helper" class="input-helper">The more specific the evidence, the more unserious the verdict.</p>
+          </div>
+
+          <div class="category-block">
+            <div class="field-label-row">
+              <span class="field-label">Choose a lane <span class="optional">(optional)</span></span>
+              <span id="selected-category" class="selected-category">Random by default</span>
+            </div>
+            <div class="category-grid" role="group" aria-label="Situation category">
+              <button class="category-chip" type="button" data-category="Crush">💘 Crush</button>
+              <button class="category-chip" type="button" data-category="Friendship">🫂 Friendship</button>
+              <button class="category-chip" type="button" data-category="Social Media">📱 Social media</button>
+              <button class="category-chip" type="button" data-category="Life">🌤️ Life</button>
+              <button class="category-chip" type="button" data-category="Random">🎲 Random</button>
+              <button class="category-chip" type="button" data-category="I don't even know bro">🫠 No idea bro</button>
+            </div>
+          </div>
+
+          <div class="example-row" aria-label="Try an example situation">
+            <span>Need a prompt?</span>
+            <button type="button" class="example-link" data-example="They liked my 2019 photo at 2:14 AM but haven't said anything.">Use a classic crush case <span aria-hidden="true">↗</span></button>
+          </div>
+
+          <button id="analyze-button" class="primary-button" type="button">
+            <span class="button-icon" aria-hidden="true">✦</span>
+            <span class="btn-label">Analyze my delusion</span>
+            <span class="button-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button id="random-button" class="ghost-button random-btn" type="button">🎲 Surprise me with a situation</button>
+          <p id="mode-note" class="button-footnote">⌁ Runs locally by default. Optional AI mode is clearly labeled.</p>
+        </div>
+
+        <div class="panel verdict-panel" aria-live="polite">
+          <div class="panel-topline">
+            <span class="panel-kicker">02 / THE VERDICT</span>
+            <span class="verdict-live"><span class="live-dot"></span> LIVE-ish</span>
+          </div>
+
+          <div id="empty-state" class="empty-state">
+            <div class="empty-brain" aria-hidden="true">🧠</div>
+            <h2>The truth is buffering.</h2>
+            <p>Your verdict will appear here after you submit the evidence.</p>
+            <div class="empty-rule"><span></span><span></span><span></span></div>
+          </div>
+
+          <div id="loading-state" class="loading-state is-hidden" aria-live="assertive">
+            <div class="loading-orbit" aria-hidden="true"><span>🧠</span></div>
+            <p class="loading-label">CONSULTING THE COUNCIL...</p>
+            <p id="loading-message" class="loading-message">Checking your last 47 assumptions...</p>
+          </div>
+
+          <div id="result-state" class="result-state is-hidden">
+            <p id="result-badge" class="result-badge"></p>
+            <div class="score-header">
+              <div>
+                <p class="result-overline">YOUR DELUSION SCORE</p>
+                <div class="score-number-row"><span id="score-number">87</span><span class="score-percent">%</span></div>
+              </div>
+              <div id="score-face" class="score-face" aria-hidden="true">🫠</div>
+            </div>
+
+            <div class="meter-wrap" aria-label="Delusion score meter">
+              <div class="meter-labels"><span>Grounded-ish</span><span>Absolutely not</span></div>
+              <div class="meter-track"><div id="score-meter" class="meter-fill" style="width: 0%"></div><span id="meter-thumb" class="meter-thumb" style="left: 0%"></span></div>
+              <div id="meter-blocks" class="meter-blocks" aria-hidden="true"></div>
+            </div>
+
+            <div class="result-grid">
+              <article class="result-card verdict-card">
+                <span class="card-label">🚨 VERDICT</span>
+                <p id="verdict-text">Bro is overthinking.</p>
+              </article>
+              <article class="result-card mini-score-card">
+                <div class="mini-score-top"><span class="card-label">OVERTHINKING</span><strong><span id="overthinking-score">87</span>%</strong></div>
+                <div class="mini-track"><div id="overthinking-meter" style="width: 0%"></div></div>
+                <p id="overthinking-note">Your brain has opened 14 unnecessary tabs.</p>
+              </article>
+            </div>
+
+            <article class="result-card reality-card">
+              <span class="card-label">🪞 REALITY CHECK</span>
+              <p id="reality-text">Viewing your story is not a legally binding declaration of love.</p>
+            </article>
+
+            <article class="result-card advice-card">
+              <span class="card-label">🌱 BRUTALLY HONEST ADVICE</span>
+              <p id="advice-text">Touch grass. Then drink water. In that order.</p>
+            </article>
+
+            <div class="result-actions">
+              <button id="worse-button" class="secondary-button" type="button">Make it worse <span aria-hidden="true">💀</span></button>
+              <button id="grass-button" class="secondary-button" type="button">Touch grass <span aria-hidden="true">🌱</span></button>
+              <button id="copy-button" class="ghost-button" type="button"><span aria-hidden="true">⧉</span> Copy result</button>
+              <button id="share-button" class="ghost-button" type="button"><span aria-hidden="true">↗</span> Share</button>
+            </div>
+            <button id="another-button" class="reset-button" type="button">Try another situation <span aria-hidden="true">↻</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="grass-callout" class="grass-callout is-hidden" aria-live="polite">
+        <span class="grass-icon" aria-hidden="true">🌱</span>
+        <div><strong id="grass-title">Grass department dispatched.</strong><p id="grass-message">Look at something that is not your phone for 30 seconds.</p></div>
+        <button id="dismiss-grass" type="button" aria-label="Dismiss touch grass message">×</button>
+      </section>
+
+      <section class="history-section" aria-labelledby="history-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> THE PAPER TRAIL</p>
+            <h2 id="history-title">Recent spirals</h2>
+          </div>
+          <button id="clear-history" class="clear-button" type="button">Clear history <span aria-hidden="true">×</span></button>
+        </div>
+        <div id="history-list" class="history-list">
+          <div id="history-empty" class="history-empty"><span aria-hidden="true">🗂️</span><p>No archived spirals yet. This is your clean slate.</p></div>
+        </div>
+      </section>
+
+      <section class="dex" aria-label="Secrets found"><strong>🥚 Secrets found: <span id="dex-count">0/14</span></strong><ul id="dex-list"></ul><p>Hint: there are phrases, a classic cheat code, a 1-in-1000 outcome and a very poked brain.</p></section>
+      <div id="grass-field" class="grass-field" aria-hidden="true"></div>
+      <footer class="site-footer">
+        <p><span class="footer-brain" aria-hidden="true">🧠</span> AM I BEING DELUSIONAL? is an entertainment toy, not medical advice.</p>
+        <p>Built for harmless overthinkers everywhere.</p>
+      </footer>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="engine.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

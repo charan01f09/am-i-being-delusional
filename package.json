@@ -1,0 +1,11 @@
+{
+  "name": "am-i-being-delusional",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A harmless reality-check machine for your most overthought situations.",
+  "scripts": {
+    "dev": "python3 -m http.server 3000",
+    "build": "rm -rf dist && mkdir -p dist && cp index.html styles.css engine.js app.js brand-mark.svg dist/",
+    "start": "python3 -m http.server 3000"
+  }
+}
